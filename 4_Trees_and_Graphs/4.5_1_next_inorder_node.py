@@ -1,9 +1,10 @@
 from Queue import *
 class Node:
-	def __init__(self, data, left = None, right = None):
+	def __init__(self, data, left = None, right = None, parent = None):
 		self.data = data
 		self.left = left
 		self.right = right
+		self.parent = parent
 class BinaryTree:
 	def __init__(self):
 		self.root = None
@@ -24,7 +25,10 @@ class BinaryTree:
 			self.inOrder(root.left)
 			print root.data
 			self.inOrder(root.right)
-
+def nextNode(a, root, data): #code incomplete. Stumbled on how to create parent link in tree structure.
+	if root.data == data:
+		return root.right.data
+	elif 
 
 a = BinaryTree()
 root = a.addNode(100)
